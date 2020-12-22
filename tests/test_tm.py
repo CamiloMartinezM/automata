@@ -93,7 +93,11 @@ class TestTM(object):
             final_states={'q3'}
         )
         # MNTM which accepts all strings in {0, 1}* and writes all
+<<<<<<< HEAD
         # '1's from the first tape (input) to the second tape.
+=======
+        # 1's from the first tape (input) to the second tape.
+>>>>>>> 478af78ea917619b7a8febc4c7699592dce547dd
         self.mntm1 = MNTM(
             states={'q0', 'q1'},
             input_symbols={'0', '1'},
@@ -110,7 +114,11 @@ class TestTM(object):
             blank_symbol='#',
             final_states={'q1'},
         )
+<<<<<<< HEAD
         # MNTM which accepts all strings with a number of '0's of the form
+=======
+        # MNTM which accepts all strings with a number of 0's of the form
+>>>>>>> 478af78ea917619b7a8febc4c7699592dce547dd
         # n^2, i.e is a square number. The string starts with '#'.
         self.mntm2 = MNTM(
             states=set(['q' + str(i)
@@ -141,14 +149,22 @@ class TestTM(object):
                     ],  # Testing whether tape 1 and 2 have the same length
                     ('0', '#', '#'): [
                         ('q3', (('0', 'N'), ('#', 'N'), ('#', 'N')))
+<<<<<<< HEAD
                     ],  # length of tape 1 is greater than tape 2's (continues)
+=======
+                    ],  # length of tape 1 is greater than tape 2'N (continues)
+>>>>>>> 478af78ea917619b7a8febc4c7699592dce547dd
                     ('#', '#', '#'): [
                         ('qf', (('#', 'N'), ('#', 'N'), ('#', 'N')))
                     ],  # tape 1 and 2 were found to be of equal length
                         # accepts
                     ('#', '0', '#'): [
                         ('qr', (('#', 'N'), ('0', 'N'), ('#', 'N')))
+<<<<<<< HEAD
                     ],  # length of tape 2 is greater than tape 1's (rejects)
+=======
+                    ],  # length of tape 2 is greater than tape 1'N (rejects)
+>>>>>>> 478af78ea917619b7a8febc4c7699592dce547dd
                 },
                 'q3': {
                     ('0', '#', '#'): [('q4', (('0', 'N'), ('#', 'N'),
